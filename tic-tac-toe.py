@@ -4,20 +4,19 @@
 def main():
 
     gameBoardList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    drawList = []
 
     game = "started"
 
     while game == "started":
         gameBoard(gameBoardList)
         xTurn(gameBoardList)
-        game = gameOver(gameBoardList, drawList)
+        game = gameOver(gameBoardList)
         print()
 
         if game == "started":
             gameBoard(gameBoardList)
             oTurn(gameBoardList)
-            game = gameOver(gameBoardList, drawList)
+            game = gameOver(gameBoardList)
             print()
             
         if game == "over":
@@ -44,7 +43,7 @@ def oTurn(gameBoardList):
 
     gameBoardList[mark] = "o"
 
-def gameOver(gameBoardList, drawList):
+def gameOver(gameBoardList):
     one = gameBoardList[0]
     two = gameBoardList[1]
     three = gameBoardList[2]
